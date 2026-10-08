@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sauna 3D</title>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <style>
+    html,body { width:100%; height:100%; margin:0; overflow:hidden; background:#eeeae4; }
+    model-viewer { width:100%; height:100%; --poster-color:#eeeae4; }
+    .hint { position:fixed; left:50%; bottom:18px; transform:translateX(-50%); padding:8px 12px; border-radius:999px; background:rgba(255,255,255,.82); font:13px/1.2 Arial,sans-serif; color:#333; box-shadow:0 2px 14px rgba(0,0,0,.10); pointer-events:none; backdrop-filter:blur(8px); }
+  </style>
+</head>
+<body>
+  <model-viewer
+    src="sauna.glb"
+    alt="Modelo 3D de sauna"
+    camera-controls
+    touch-action="pan-y"
+    auto-rotate
+    auto-rotate-delay="2500"
+    rotation-per-second="12deg"
+    shadow-intensity="1"
+    shadow-softness="0.8"
+    exposure="1"
+    environment-image="neutral"
+    interaction-prompt="auto"
+    camera-orbit="45deg 70deg auto"
+    min-camera-orbit="auto 5deg auto"
+    max-camera-orbit="auto 175deg auto"
+    ar>
+  </model-viewer>
+  <div class="hint">Arrastra para girar · Rueda/pellizca para acercar</div>
+</body>
+</html>
